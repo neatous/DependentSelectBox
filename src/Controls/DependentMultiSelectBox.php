@@ -58,9 +58,6 @@ class DependentMultiSelectBox extends Nette\Forms\Controls\MultiSelectBox implem
 	}
 
 
-	/**
-	 * @return array
-     	 */
 	public function getValue(): array
 	{
 		return $this->traitGetValue();

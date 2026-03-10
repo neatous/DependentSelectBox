@@ -70,11 +70,7 @@ trait DependentTrait
 		return $control;
 	}
 
-
-	/**
-	 * @return string|int
-	 */
-	public function getValue()
+	public function getValue(): string|int|null|array
 	{
 		$this->tryLoadItems();
 
@@ -105,7 +101,7 @@ trait DependentTrait
 	public function setItems(array $items, bool $useKeys = true)
 	{
 		parent::setItems($items, $useKeys);
-		
+
 		if (!in_array($this->tempValue, [null, '', []], true)) {
 			parent::setValue($this->tempValue);
 		}
